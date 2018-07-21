@@ -1,11 +1,11 @@
-var width = 1000,
-    height = 600;
+var width = 960,
+    height = 490;
 
 d3.select('svg')
   .attr('width', width)
   .attr('height', height);
 
-var worldProjection = d3.geoNaturalEarth1();
+var worldProjection = d3.geoEquirectangular();
 
 var geoPath = d3.geoPath()
     .projection(worldProjection);
