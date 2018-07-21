@@ -1,26 +1,18 @@
-var width = 8000,
-    height = 6000;
+var width = 1000,
+    height = 600;
 
-var svg = d3.select('body')
-  .append('svg')
+d3.select('svg')
   .attr('width', width)
   .attr('height', height);
 
-var g = svg.append('g');
-
-var albersProjection = d3.geoNaturalEarth1();
-  // .scale(200000)
-  // .scale(2000)
-  // .rotate([0, 0])
-  // .center([0, 0]);
-
+var worldProjection = d3.geoNaturalEarth1();
 
 var geoPath = d3.geoPath()
-    .projection(albersProjection);
+    .projection(worldProjection);
 
-g.selectAll('path')
+d3.select('svg').selectAll('path')
   .data(map_json.features)
   .enter()
   .append('path')
-  .attr('fill', '#ccc')
+  .attr('fill', '#099')
   .attr('d', geoPath)
