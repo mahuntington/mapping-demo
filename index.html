@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-        <script src="https://cdn.rawgit.com/mahuntington/mapping-demo/master/map_data3.js" charset="utf-8"></script>
-    </head>
-    <body>
-        <svg></svg>
-        <script src="app.js" charset="utf-8"></script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+		<script src="map_data3.js" charset="utf-8"></script>
+	</head>
+<body>
+	<svg></svg>
+	<form>
+		Top Left:
+		<input type="text" placeholder="latitude"/>
+		<input type="text" placeholder="longitude"/>
+		<br/>
+		Bottom Right:
+		<input type="text" placeholder="latitude"/>
+		<input type="text" placeholder="longitude"/>
+
+		<input type="submit"/>
+	</form>
+	<table border="1">
+		<tr>
+			<th>lat</th>
+			<th>lng</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<script src="app.js" charset="utf-8"></script>
+</body>
 </html>
