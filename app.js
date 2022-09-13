@@ -34,13 +34,14 @@ d3.select('svg').on('click', (event)=>{
 })
 d3.select('body').on('keydown', (event)=>{
 	d3.select('tbody').html('');
-	for(point of points){
+	const coords = points.map(point => worldProjection.invert(point))
+	for(coord of coords){
 		const row = d3.select('tbody')
 			.append('tr')
 		row.append('td')
-			.html(point[0])
+			.html(coord[0])
 		row.append('td')
-			.html(point[1])
+			.html(coord[1])
 	}
 	points = [];
 })
